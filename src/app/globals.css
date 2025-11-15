@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-jakarta: "Plus Jakarta", sans-serif;
+  --font-geist: "Geist Mono", monospace;
+  --color-primary-100: oklch(0.3566 0.0635 230.07);
+  --color-primary-150: oklch(0.3266 0.0635 230.07);
+  --color-secondary-100: oklch(0.834 0.1584 88.96);
+  --color-secondary-150: oklch(0.784 0.1584 88.96);
+  --color-neutral-100: oklch(0.9612 0 0);
+  --color-neutral-150: oklch(0.93 0 0);
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1536px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--breakpoint-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--breakpoint-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--breakpoint-lg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--breakpoint-xl);
+  }
+}
+
+@media (min-width: 1800px) {
+  .container-wrapper {
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
