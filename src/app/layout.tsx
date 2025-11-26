@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import React from "react";
 
-import { Button } from "@/components/ui/button";
+import { georama, robotoMono } from "@/lib/fonts";
 
 import "./globals.css";
 
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${georama.variable} ${robotoMono.variable}`}>
       <body>
         <div>
           <main>{children}</main>

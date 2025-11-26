@@ -1,5 +1,10 @@
-import Navbar from "@/components/navbar";
+import { Navbar, Welcome } from "@/components";
 
 export default function Home() {
-  return <Navbar />;
+  return (
+    <>
+      <Navbar />
+      <Welcome />
+    </>
+  );
 }
