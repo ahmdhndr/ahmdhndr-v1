@@ -1,10 +1,11 @@
-import { Navbar, Welcome } from "@/components";
+import { Dock, Navbar, Welcome } from "@/components";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Welcome />
+      <Dock />
     </>
   );
 }

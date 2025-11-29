@@ -14,7 +14,7 @@ export default function NotFound() {
           Page not found
         </h2>
         <Separator className="mx-auto w-20" />
-        <p className="w-full max-w-80 text-sm tracking-normal text-balance md:text-base">
+        <p className="w-full max-w-80 text-sm tracking-normal text-balance text-gray-50 md:text-base">
           The page you are looking for is not found. It could be that you
           entered the wrong URL or the page you are looking for has changed.
         </p>
