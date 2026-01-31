@@ -1,8 +1,6 @@
-module.exports = {
+const commitlintConfig = {
   extends: ["@commitlint/config-conventional"],
   rules: {
-    //   TODO Add Scope Enum Here
-    // 'scope-enum': [2, 'always', ['yourscope', 'yourscope']],
     "type-enum": [
       2,
       "always",
@@ -17,8 +15,9 @@ module.exports = {
         "test",
         "perf",
         "revert",
-        "vercel",
       ],
     ],
   },
 };
+
+export default commitlintConfig;
