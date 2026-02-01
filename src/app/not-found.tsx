@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
+import ButtonComponent from "@/components/button-component";
 import { Separator } from "@/components/ui/separator";
 
 export default function NotFound() {
@@ -11,9 +9,7 @@ export default function NotFound() {
       </h1>
       <Separator className="mx-auto my-2 w-24" />
       <h2 className="my-0 text-xl font-semibold md:text-3xl">Page not found</h2>
-      <Link href={"/"}>
-        <Button className="my-4">Back to home</Button>
-      </Link>
+      <ButtonComponent action="Back" label="to home" link="/" />
     </div>
   );
 }
