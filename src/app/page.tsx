@@ -1,35 +1,59 @@
 import Link from "next/link";
 
+import AboutSection from "@/components/about-section";
+import ExperienceSection from "@/components/experience-section";
+import MediaSocialSection from "@/components/media-social-section";
+import NavSection from "@/components/nav-section";
+import ProjectSection from "@/components/project-section";
+
 export default function Home() {
   return (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="prose dark:prose-invert mx-auto">
-        <section className="mx-auto my-4 flex flex-col items-center justify-center">
-          <h1 className="text-xl font-bold text-balance md:text-3xl">
-            Next.js Starter
+    <div className="lg:flex lg:justify-between lg:gap-4">
+      <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
+        <div>
+          <h1 className="text-5xl font-bold tracking-tight text-slate-200 md:text-4xl">
+            <Link href="/">Achmad Hendarsyah</Link>
           </h1>
-          <p className="text-muted-foreground my-0 w-full max-w-lg">
-            A basic starter for Next.js with Tailwind CSS, Shadcn
-            (initialization) and Typescript. <br />
-            Start by editing{" "}
-            <code className="font-geist bg-primary-150 rounded px-1 py-0.5 font-semibold">
-              src/app/page.tsx
-            </code>
-            .
+
+          <h2 className="text-secondary-200 mt-3 font-mono text-xl font-medium tracking-normal md:text-lg">
+            Junior Software Engineer
+          </h2>
+
+          <p className="mt-4 max-w-xs leading-normal">
+            I am passionate about web development and exploring modern
+            technologies.
           </p>
+
+          <NavSection />
+        </div>
+
+        {/* media social link */}
+        <MediaSocialSection />
+      </header>
+
+      {/* main content */}
+      <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectSection />
+        {/* <ArticleSection /> */}
+
+        {/* Footer */}
+        <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
           <p>
-            See{" "}
-            <Link
-              href={"https://github.com/ahmdhndr/nextjs-starter-shadcn"}
-              target="_blank"
-              className="text-secondary-100"
-            >
-              Github Repo
-            </Link>{" "}
-            for further information.
+            &copy; 2026 &middot; Achmad Hendarsyah
+            {/* <Link */}
+            {/*   href="https://brittanychiang.com/" */}
+            {/*   rel="noopener noreferrer" */}
+            {/*   target="_blank" */}
+            {/*   aria-label="Brittany Chiang's website (opens in a new tab)" */}
+            {/*   className="hover:text-secondary-200 focus-visible:text-secondary-200 group/link inline-flex items-baseline text-base leading-tight font-medium text-slate-200" */}
+            {/* > */}
+            {/*   Brittany Chiang */}
+            {/* </Link> */}
           </p>
-        </section>
-      </div>
+        </footer>
+      </main>
     </div>
   );
 }

@@ -5,23 +5,15 @@ import { Separator } from "@/components/ui/separator";
 
 export default function NotFound() {
   return (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="prose dark:prose-invert space-y-4 text-center">
-        <h1 className="my-0 text-4xl font-extrabold tracking-tight md:text-5xl">
-          404
-        </h1>
-        <h2 className="my-0 text-xl font-semibold uppercase md:text-3xl">
-          Page not found
-        </h2>
-        <Separator className="mx-auto w-20" />
-        <p className="w-full max-w-80 text-sm tracking-normal text-balance md:text-base">
-          The page you are looking for is not found. It could be that you
-          entered the wrong URL or the page you are looking for has changed.
-        </p>
-        <Link href={"/"}>
-          <Button className="my-4">Take me home</Button>
-        </Link>
-      </div>
+    <div className="flex min-h-screen w-full flex-col items-center justify-center">
+      <h1 className="my-0 text-5xl font-extrabold tracking-tight md:text-7xl lg:text-9xl">
+        404
+      </h1>
+      <Separator className="mx-auto my-2 w-24" />
+      <h2 className="my-0 text-xl font-semibold md:text-3xl">Page not found</h2>
+      <Link href={"/"}>
+        <Button className="my-4">Back to home</Button>
+      </Link>
     </div>
   );
 }
