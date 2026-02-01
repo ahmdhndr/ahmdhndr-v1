@@ -1,14 +1,38 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import React from "react";
 
-import { Button } from "@/components/ui/button";
+import Spotlight from "@/components/spotlight";
+import { siteConfig } from "@/config/site";
+import { geistMono, jakarta } from "@/lib/fonts";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Basic Next.js Starter",
-  description: "Basic Next.js Starter with Shadcn UI initiated",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.title}`,
+    template: `%s | ${siteConfig.title}`,
+  },
+  description: siteConfig.description,
+  robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.title,
+    images: [`${siteConfig.url}/og.png`],
+    type: "website",
+    locale: "id_ID",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/images/og.jpg`],
+  },
 };
 
 export default function RootLayout({
@@ -17,20 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="font-jakarta bg-primary-200 h-full w-full text-neutral-100 antialiased">
-        <div className="flex h-screen w-screen flex-col justify-between">
-          <main className="container grow">{children}</main>
-          <footer className="border-secondary-100 flex h-14 items-center justify-center border-t font-sans">
-            &copy; {new Date().getFullYear()} By{" "}
-            <span className="ml-1">
-              <Link href={"https://ahmdhndr.vercel.app/"} target="_blank">
-                <Button variant={"link"} className="text-secondary-200 p-0">
-                  Achmad Hendarsyah
-                </Button>
-              </Link>
-            </span>
-          </footer>
+    <html
+      lang="en"
+      className={`${jakarta.variable} ${geistMono.variable} scroll-smooth antialiased`}
+      data-scroll-behavior="smooth"
+    >
+      <body className="bg-primary-200 selection:bg-secondary-200 selection:text-primary-200 leading-relaxed text-slate-400">
+        <div className="group/spotlight relative">
+          <Spotlight />
+          <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+            {children}
+          </div>
         </div>
       </body>
     </html>

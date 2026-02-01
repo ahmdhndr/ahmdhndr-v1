@@ -1,0 +1,8 @@
+import { envClient } from "@/lib/env";
+
+export const siteConfig = {
+  title: "Achmad Hendarsyah",
+  description:
+    "Achmad Hendarsyah is a junior software engineer passionate about web development and exploring modern technologies.",
+  url: envClient.NEXT_PUBLIC_BASE_URL,
+};
