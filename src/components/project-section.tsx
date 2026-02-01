@@ -18,7 +18,7 @@ export default function ProjectSection() {
       <ol className="group/list space-y-12">
         {projects.map((project) => (
           <li key={project.id}>
-            <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:group-hover/list:opacity-50 lg:hover:opacity-100!">
+            <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:group-hover/list:opacity-50 lg:hover:opacity-100!">
               <div className="lg:group-hover:bg-primary-100/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(225, 178, 13, 1)] absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:drop-shadow-lg" />
 
               <div className="z-10 sm:order-2 sm:col-span-6">
