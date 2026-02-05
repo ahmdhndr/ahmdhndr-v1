@@ -4,7 +4,7 @@ const navLinks = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  // { id: "articles", label: "Articles" },
+  { id: "articles", label: "Articles" },
 ];
 
 const socialLinks = [
@@ -53,6 +53,24 @@ const projects = [
       "ESLint",
       "Prettier",
       "Commitlint",
+    ],
+  },
+  {
+    id: 2,
+    thumbnailSrc: "/placeholder.png",
+    site: "https://github.com/ahmdhndr/nestjs-starter",
+    name: "Nest.js Starter",
+    description:
+      "Basic starter project for building scalable and maintainable NestJS applications, equipped with developer-friendly tooling and CI-ready setup.",
+    stacks: [
+      "Nest.js",
+      "TypeScript",
+      "Husky",
+      "Github Actions",
+      "ESLint",
+      "Prettier",
+      "Commitlint",
+      "Swagger",
     ],
   },
 ];
