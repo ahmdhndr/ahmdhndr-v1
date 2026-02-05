@@ -54,7 +54,7 @@ export default function ProjectSection() {
                   >
                     {project.stacks.map((stack) => (
                       <li key={stack}>
-                        <div className="bg-secondary-200/10 text-secondary-200 flex items-center rounded-full px-3 py-1 text-xs leading-5 font-medium">
+                        <div className="bg-secondary-200/10 text-secondary-200 flex items-center rounded-full px-3 py-1 text-xs leading-5 font-medium capitalize">
                           {stack}
                         </div>
                       </li>

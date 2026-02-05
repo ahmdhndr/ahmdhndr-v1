@@ -18,7 +18,6 @@ export default function NavSection() {
             <li key={link.id}>
               <Link
                 href={`#${link.id}`}
-                // onClick={(e) => handleClick(e, link.id)}
                 className="group flex items-center py-3"
               >
                 {/* indicator */}

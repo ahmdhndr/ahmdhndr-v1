@@ -29,7 +29,7 @@ export default function Spotlight() {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
+      className="pointer-events-none fixed inset-0 -z-10 transition-opacity duration-300"
       style={{
         background: `radial-gradient(
           550px circle at var(--x, 0px) var(--y, 0px),
