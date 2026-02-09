@@ -26,6 +26,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.4
         version: 1.2.4(@types/react@19.2.9)(react@19.2.3)
+      '@rehype-pretty/transformers':
+        specifier: ^0.13.2
+        version: 0.13.2
       '@t3-oss/env-nextjs':
         specifier: ^0.13.10
         version: 0.13.10(typescript@5.9.3)(zod@4.3.6)
@@ -1360,6 +1363,10 @@ packages:
 
   '@radix-ui/rect@1.1.1':
     resolution: {integrity: sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==}
+
+  '@rehype-pretty/transformers@0.13.2':
+    resolution: {integrity: sha512-p2ciQSwqy5Ip8aNUa9q6rdS/hJZXrxHYYfDVOHvKOsBu3t9HDmQ65YX6r9Qbl19vi160OAxmGF7MIoCRDJrRhg==}
+    engines: {node: '>=18'}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -5324,6 +5331,8 @@ snapshots:
       '@types/react-dom': 19.2.3(@types/react@19.2.9)
 
   '@radix-ui/rect@1.1.1': {}
+
+  '@rehype-pretty/transformers@0.13.2': {}
 
   '@rtsao/scc@1.1.0': {}
 

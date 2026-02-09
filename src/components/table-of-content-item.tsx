@@ -35,6 +35,7 @@ export const TableOfContentItem = ({ slug, content, level }: Props) => {
       <Link
         data-tocitem
         href={`#${slug}`}
+        aria-label={content}
         className={cn(
           "inline-block text-sm text-slate-400 transition-all duration-300",
 

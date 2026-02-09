@@ -13,7 +13,7 @@ export function TableOfContents({ headings }: { headings: TocItem[] }) {
   useTocHighlighter();
 
   return (
-    <nav>
+    <nav className="max-h-[60vh] overflow-x-hidden overflow-y-auto">
       <p className="mb-4 text-sm font-bold tracking-wider text-slate-400 uppercase">
         In this post
       </p>

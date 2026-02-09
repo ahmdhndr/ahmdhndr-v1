@@ -35,3 +35,18 @@ Real learning happens in the rough drafts, the mistakes, and the constant revisi
 Code is great for solving problems. Writing is how I figure out _why_ I’m solving them in the first place.
 
 That’s reason enough to start.
+
+`var a = 1{:js}`
+
+```js /fileName/#v
+import * as fs from "node:fs";
+import * as readline from "node:readline";
+
+const fileName = process.argv[2];
+const stream = fs.createReadStream(fileName);
+const lineStream = readline.createInterface(stream);
+
+for await (const line of lineStream) {
+  /* parse the content */
+}
+```
