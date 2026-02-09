@@ -15,6 +15,7 @@ const commitlintConfig = {
         "test",
         "perf",
         "revert",
+        "post",
       ],
     ],
   },

@@ -11,3 +11,94 @@
   --color-neutral-100: oklch(0.9612 0 0);
   --color-neutral-200: oklch(0.93 0 0);
 }
+
+@utility custom-prose {
+  & :where(h2, h3) {
+    @apply scroll-mt-20;
+  }
+  /* Target <code> tags that are NOT children of <pre>
+     and NOT children of <a>
+  */
+  & :is(code):not(pre *, a *, [data-rehype-pretty-code-figure] *) {
+    @apply bg-secondary-200 text-primary-200 mx-1 rounded-sm px-1 py-0.5 font-mono font-semibold tracking-wide;
+  }
+
+  & p,
+  & li,
+  & li::marker {
+    @apply text-slate-300;
+  }
+
+  & a,
+  & strong {
+    @apply text-secondary-200;
+
+    & code {
+      &::before,
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  /* Rehype Pretty Code */
+  & [data-rehype-pretty-code-title] {
+    @apply bg-primary-100/75 text-secondary-200 rounded-t-md p-4 font-mono font-medium backdrop-blur;
+  }
+
+  & [data-rehype-pretty-code-title] + pre {
+    @apply mt-0 rounded-t-none;
+  }
+
+  & [data-highlighted-line] {
+    @apply border-secondary-200 bg-secondary-100/10 -mx-4 border-l-2 px-4;
+  }
+
+  & [data-highlighted-chars] {
+    @apply bg-secondary-200 rounded-sm px-1 py-0.5 font-medium;
+
+    & span {
+      color: var(--text-primary-200) !important;
+    }
+  }
+
+  & [data-rehype-pretty-code-figure] {
+    & code {
+      &::before,
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+
+@layer base {
+  /* Chrome, Safari, and Edge */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* The track (background) */
+    background-color: var(--color-primary-200);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* The scroll thumb (the bar) */
+    background-color: var(--color-secondary-200);
+    border-radius: 10px;
+    /* Optional: add a little border to create space between thumb and track */
+    border: 3px solid var(--color-primary-200);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-secondary-100);
+  }
+
+  /* Firefox Support */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary-200) var(--color-primary-200);
+  }
+}
