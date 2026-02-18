@@ -73,6 +73,26 @@ const projects = [
       "Swagger",
     ],
   },
+  {
+    id: 3,
+    thumbnailSrc: "/assets/images/projects/rr7-starter.png",
+    site: "https://github.com/ahmdhndr/react-router-v7-starter",
+    name: "React Router v7 Starter",
+    description:
+      "Scalable React Router v7 starter powered by Vite, TailwindCSS v4, shadcn/ui, strict TypeScript, and commit-safe tooling.",
+    stacks: [
+      "React Router v7",
+      "Vite",
+      "TypeScript",
+      "TailwindCSS v4",
+      "shadcn/ui",
+      "ESLint",
+      "Prettier",
+      "Husky",
+      "Zod",
+      "Commitlint",
+    ],
+  },
 ];
 
 export { navLinks, socialLinks, experiences, projects };
