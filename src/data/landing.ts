@@ -38,6 +38,26 @@ const experiences = [
 const projects = [
   {
     id: 1,
+    thumbnailSrc: "/assets/images/projects/create-react-router7.png",
+    site: "https://ahmdhndr.github.io/react-router-v7-starter",
+    name: "React Router v7 Starter",
+    description:
+      "Scalable React Router v7 starter powered by Vite, TailwindCSS v4, shadcn/ui, strict TypeScript, and commit-safe tooling.",
+    stacks: [
+      "React Router v7",
+      "Vite",
+      "TypeScript",
+      "TailwindCSS v4",
+      "shadcn/ui",
+      "ESLint",
+      "Prettier",
+      "Husky",
+      "Zod",
+      "Commitlint",
+    ],
+  },
+  {
+    id: 2,
     thumbnailSrc: "/assets/images/projects/starter-kit.png",
     site: "https://demo-nextjs-starter-shadcn.vercel.app",
     name: "Next.js Starter Kit",
@@ -56,7 +76,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     thumbnailSrc: "/placeholder.png",
     site: "https://github.com/ahmdhndr/nestjs-starter",
     name: "Nest.js Starter",
@@ -71,26 +91,6 @@ const projects = [
       "Prettier",
       "Commitlint",
       "Swagger",
-    ],
-  },
-  {
-    id: 3,
-    thumbnailSrc: "/assets/images/projects/rr7-starter.png",
-    site: "https://github.com/ahmdhndr/react-router-v7-starter",
-    name: "React Router v7 Starter",
-    description:
-      "Scalable React Router v7 starter powered by Vite, TailwindCSS v4, shadcn/ui, strict TypeScript, and commit-safe tooling.",
-    stacks: [
-      "React Router v7",
-      "Vite",
-      "TypeScript",
-      "TailwindCSS v4",
-      "shadcn/ui",
-      "ESLint",
-      "Prettier",
-      "Husky",
-      "Zod",
-      "Commitlint",
     ],
   },
 ];
